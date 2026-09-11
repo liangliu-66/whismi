@@ -523,10 +523,19 @@ footer {
     z-index: 5;
 }
 
-/* Ottimizzazione Smartphone Definitiva (Foto intera, fading leggero in basso e zero spazi vuoti) */
 @media (max-width: 768px) {
     .desktop-nav { display: none; }
     .menu-toggle { display: flex; }
+
+    /* Riduce lo spazio verticale tra le sezioni su smartphone (da 100px a 50px) */
+    .section {
+        padding: 50px 5%;
+    }
+
+    .section-title {
+        margin-bottom: 30px; /* Riduce lo spazio sotto i titoli delle sezioni */
+        font-size: 1.8rem;
+    }
 
     .hero {
         min-height: auto;
@@ -545,22 +554,21 @@ footer {
     .hero-img {
         width: 100%;
         height: auto;
-        max-height: 42vh; /* Altezza bilanciata per mostrare tutta la foto della band */
-        object-fit: contain; /* Mostra tutta l'immagine per intero senza tagli */
+        max-height: 42vh;
+        object-fit: contain;
         object-position: center center;
         background-color: var(--bg-color);
         display: block;
     }
 
-    /* Fading morbido e limitato solo agli ultimi pixel in basso */
     .hero-overlay {
         background: linear-gradient(to bottom, transparent 75%, rgba(11, 6, 20, 0.9) 100%);
     }
 
     .hero-content {
         position: relative;
-        padding: 5px 15px 30px 15px;
-        margin-top: -15px; /* Riporta i testi esattamente sotto la foto senza spazi vuoti */
+        padding: 5px 15px 25px 15px;
+        margin-top: -15px;
         background: transparent;
     }
 
