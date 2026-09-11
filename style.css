@@ -1,0 +1,63 @@
+/* Sezione Instagram / Social Feed Mockup */
+.instagram-container {
+    background: var(--card-bg);
+    border: 2px solid var(--neon-pink);
+    border-radius: 12px;
+    padding: 30px;
+    max-width: 900px;
+    margin: 0 auto;
+    box-shadow: 0 0 25px rgba(255, 42, 133, 0.2);
+    backdrop-filter: blur(8px);
+    text-align: center;
+}
+
+.instagram-banner p {
+    color: #bfaee3;
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+}
+
+.ig-follow-btn {
+    display: inline-block;
+    padding: 10px 25px;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 700;
+    text-decoration: none;
+    color: #fff;
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+    border-radius: 4px;
+    box-shadow: 0 0 15px rgba(220, 39, 67, 0.4);
+    transition: 0.3s;
+    margin-bottom: 30px;
+}
+
+.ig-follow-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(220, 39, 67, 0.7);
+}
+
+.instagram-grid-mockup {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 15px;
+}
+
+.ig-post-mockup {
+    height: 180px;
+    background: rgba(11, 6, 20, 0.8);
+    border: 1px dashed var(--neon-cyan);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--neon-cyan);
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+
+.ig-post-mockup:hover {
+    border-color: var(--neon-pink);
+    color: var(--neon-pink);
+    background: rgba(255, 42, 133, 0.05);
+}

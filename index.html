@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhisMi Sound | Cyberpunk City Pop Live Experience</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Collegamento al file CSS esterno -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">WHISMI SOUND</div>
+        <nav>
+            <a href="#band">The Crew</a>
+            <a href="#sound">Sound</a>
+            <a href="#live">Live Dates</a>
+            <a href="#social">Instagram</a>
+            <a href="#booking">Booking</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Neo-Tokyo Groove</h1>
+        <p>A whisper from Milano to Neo-Tokyo. Jazz-Funk live experience in Italian, English & Japanese.</p>
+        <a href="#live" class="cta-btn">Book a Live</a>
+    </section>
+
+    <!-- Sezione Band -->
+    <section id="band" class="section">
+        <h2 class="section-title">// The Cyberpunk Crew</h2>
+        <div class="band-grid">
+            <div class="band-card">
+                <div class="avatar-placeholder">Anime Art</div>
+                <h3>Italia Vocalist</h3>
+                <span>Lead Voice</span>
+            </div>
+            <div class="band-card">
+                <div class="avatar-placeholder">Anime Art</div>
+                <h3>Keyboards</h3>
+                <span>Piano & Synth</span>
+            </div>
+            <div class="band-card">
+                <div class="avatar-placeholder">Anime Art</div>
+                <h3>Drums</h3>
+                <span>Rhythm Matrix</span>
+            </div>
+            <div class="band-card">
+                <div class="avatar-placeholder">Anime Art</div>
+                <h3>Bass</h3>
+                <span>Funk Lines</span>
+            </div>
+            <div class="band-card">
+                <div class="avatar-placeholder">Anime Art</div>
+                <h3>Guitar</h3>
+                <span>Neon Chords</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sezione Sound / Player -->
+    <section id="sound" class="section">
+        <h2 class="section-title">// Audio Terminal</h2>
+        <div class="player-container">
+            <div class="track-list">
+                <div class="track-item" data-track="shibuya">
+                    <div class="track-info">
+                        <h4>Midnight Shibuya Funk</h4>
+                        <p>WhisMi Sound - Original Mix</p>
+                    </div>
+                    <span class="track-lang">日本語 (JP)</span>
+                </div>
+                <div class="track-item" data-track="rain">
+                    <div class="track-info">
+                        <h4>Neon Rain & Coffee</h4>
+                        <p>WhisMi Sound - Live Session</p>
+                    </div>
+                    <span class="track-lang">English (EN)</span>
+                </div>
+                <div class="track-item" data-track="milano">
+                    <div class="track-info">
+                        <h4>Notturno Milanese</h4>
+                        <p>WhisMi Sound - Ballad</p>
+                    </div>
+                    <span class="track-lang">Italiano (IT)</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sezione Live Dates -->
+    <section id="live" class="section">
+        <h2 class="section-title">// Flight / Live Board</h2>
+        <div class="live-board">
+            <div class="live-row">
+                <div class="live-date">24.03.2026</div>
+                <div class="live-venue">Club Cyber-Tokyo</div>
+                <div class="live-city">Milano, Italy</div>
+                <button class="live-btn ticket-btn">TICKETS</button>
+            </div>
+            <div class="live-row">
+                <div class="live-date">02.04.2026</div>
+                <div class="live-venue">Neon Blue Jazz Lounge</div>
+                <div class="live-city">Roma, Italy</div>
+                <button class="live-btn ticket-btn">TICKETS</button>
+            </div>
+            <div class="live-row">
+                <div class="live-date">18.04.2026</div>
+                <div class="live-venue">Akihabara Groove Stage</div>
+                <div class="live-city">Torino, Italy</div>
+                <button class="live-btn ticket-btn">TICKETS</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sezione Instagram Feed / Social -->
+    <section id="social" class="section">
+        <h2 class="section-title">// Social Frequencies (IG)</h2>
+        <div class="instagram-container">
+            <div class="instagram-banner">
+                <p>Segui le prove, i backstage e gli annunci live in tempo reale sul nostro canale ufficiale.</p>
+                <!-- Sostituisci il link con la vera pagina Instagram dei WhisMi Sound -->
+                <a href="https://instagram.com" target="_blank" class="ig-follow-btn">@whismisound on IG</a>
+            </div>
+            <!-- Qui in futuro potrai incollare il codice del widget Instagram (es. Common Ninja o EmbedSocial) -->
+            <div class="instagram-grid-mockup">
+                <div class="ig-post-mockup"><span>Reel: Live Jam</span></div>
+                <div class="ig-post-mockup"><span>Backstage Tokyo</span></div>
+                <div class="ig-post-mockup"><span>New Track Preview</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sezione Booking / Contatti -->
+    <section id="booking" class="section">
+        <h2 class="section-title">// Secure Transmission</h2>
+        <div class="booking-container">
+            <form class="booking-form" id="bookingForm">
+                <div class="form-group">
+                    <label for="name">Nome / Venue / Festival</label>
+                    <input type="text" id="name" required placeholder="Es. Blue Note Milano">
+                </div>
+                <div class="form-group">
+                    <label for="email">Canale di Contatto (Email)</label>
+                    <input type="email" id="email" required placeholder="name@domain.com">
+                </div>
+                <div class="form-group">
+                    <label for="message">Dettagli Evento / Messaggio</label>
+                    <textarea id="message" rows="4" required placeholder="Raccontaci del live o della collaborazione..."></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Invia Trasmissione</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 WhisMi Sound. All Rights Reserved. City Pop Cyberpunk Vibe.</p>
+    </footer>
+
+    <!-- Collegamento al file JS esterno -->
+    <script src="script.js"></script>
+</body>
+</html>
