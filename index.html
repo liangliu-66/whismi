@@ -12,145 +12,135 @@
 <body>
 
     <header>
-        <div class="logo">WHISMI SOUND</div>
+        <div class="logo-container">
+            <img src="gallery/logo.png" alt="WhisMi Sound Logo" class="nav-logo">
+        </div>
         <nav>
-            <a href="#band">The Crew</a>
-            <a href="#sound">Sound</a>
-            <a href="#live">Live Dates</a>
+            <a href="#band">Crew</a>
             <a href="#social">Instagram</a>
             <a href="#booking">Booking</a>
         </nav>
     </header>
 
+    <!-- Hero Section -->
     <section class="hero">
-        <h1>Neo-Tokyo Groove</h1>
-        <p>A whisper from Milano to Neo-Tokyo. Jazz-Funk live experience in Italian, English & Japanese.</p>
-        <a href="#live" class="cta-btn">Book a Live</a>
+        <div class="hero-image-container">
+            <img src="gallery/band-full.webp" alt="WhisMi Sound Band" class="hero-img">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <h1 class="hero-title">WhisMi Sound</h1>
+            <p class="hero-subtitle">Smooth Jazz - Citypop - RnB Soul</p>
+            <a href="https://www.instagram.com/whismi_sound/" target="_blank" class="cta-btn hero-follow-btn">FOLLOW QUI</a>
+        </div>
     </section>
 
-    <!-- Sezione Band -->
+    <!-- Sezione Crew con foto profilo reali -->
     <section id="band" class="section">
-        <h2 class="section-title">// The Cyberpunk Crew</h2>
+        <h2 class="section-title">// CREW</h2>
         <div class="band-grid">
-            <div class="band-card">
-                <div class="avatar-placeholder">Anime Art</div>
-                <h3>Italia Vocalist</h3>
-                <span>Lead Voice</span>
-            </div>
-            <div class="band-card">
-                <div class="avatar-placeholder">Anime Art</div>
-                <h3>Keyboards</h3>
-                <span>Piano & Synth</span>
-            </div>
-            <div class="band-card">
-                <div class="avatar-placeholder">Anime Art</div>
-                <h3>Drums</h3>
-                <span>Rhythm Matrix</span>
-            </div>
-            <div class="band-card">
-                <div class="avatar-placeholder">Anime Art</div>
-                <h3>Bass</h3>
-                <span>Funk Lines</span>
-            </div>
-            <div class="band-card">
-                <div class="avatar-placeholder">Anime Art</div>
-                <h3>Guitar</h3>
-                <span>Neon Chords</span>
-            </div>
+            <!-- Vocalist -->
+            <a href="https://www.instagram.com/tulipvoice?stkn=OHd1c2poc2thYmlp" target="_blank" class="band-card-link">
+                <div class="band-card">
+                    <div class="member-avatar-container">
+                        <img src="gallery/vocalist.webp" alt="Vocalist" class="member-photo">
+                    </div>
+                    <h3>Vocalist</h3>
+                    <span>Lead Voice</span>
+                    <span class="member-ig">@tulipvoice</span>
+                </div>
+            </a>
+
+            <!-- Keyboards (Pianista) -->
+            <a href="https://www.instagram.com/giuseppeyin?stkn=ajN4NzYyaXR6emYw" target="_blank" class="band-card-link">
+                <div class="band-card">
+                    <div class="member-avatar-container">
+                        <img src="gallery/pianista.webp" alt="Keyboards" class="member-photo">
+                    </div>
+                    <h3>Keyboards</h3>
+                    <span>Piano & Synth</span>
+                    <span class="member-ig">@giuseppeyin</span>
+                </div>
+            </a>
+
+            <!-- Drums (Batterista) -->
+            <a href="https://www.instagram.com/2663.zz?stkn=MWc1dWVia3hsYXZudg==" target="_blank" class="band-card-link">
+                <div class="band-card">
+                    <div class="member-avatar-container">
+                        <img src="gallery/batteria.webp" alt="Drums" class="member-photo">
+                    </div>
+                    <h3>Drums</h3>
+                    <span>Rhythm Matrix</span>
+                    <span class="member-ig">@2663.zz</span>
+                </div>
+            </a>
+
+            <!-- Bass (Bassista) -->
+            <a href="https://www.instagram.com/doppiav.v?stkn=MTUzc3JsNXhvdXc1bw==" target="_blank" class="band-card-link">
+                <div class="band-card">
+                    <div class="member-avatar-container">
+                        <img src="gallery/bassista.webp" alt="Bass" class="member-photo">
+                    </div>
+                    <h3>Bass</h3>
+                    <span>Funk Lines</span>
+                    <span class="member-ig">@doppiav.v</span>
+                </div>
+            </a>
+
+            <!-- Guitar (Chitarrista) -->
+            <a href="https://www.instagram.com/brucefan8?stkn=YmxzZWtrbWNhY3Yx" target="_blank" class="band-card-link">
+                <div class="band-card">
+                    <div class="member-avatar-container">
+                        <img src="gallery/chitarra.webp" alt="Guitar" class="member-photo">
+                    </div>
+                    <h3>Guitar</h3>
+                    <span>Neon Chords</span>
+                    <span class="member-ig">@brucefan8</span>
+                </div>
+            </a>
         </div>
     </section>
 
-    <!-- Sezione Sound / Player -->
-    <section id="sound" class="section">
-        <h2 class="section-title">// Audio Terminal</h2>
-        <div class="player-container">
-            <div class="track-list">
-                <div class="track-item" data-track="shibuya">
-                    <div class="track-info">
-                        <h4>Midnight Shibuya Funk</h4>
-                        <p>WhisMi Sound - Original Mix</p>
-                    </div>
-                    <span class="track-lang">日本語 (JP)</span>
-                </div>
-                <div class="track-item" data-track="rain">
-                    <div class="track-info">
-                        <h4>Neon Rain & Coffee</h4>
-                        <p>WhisMi Sound - Live Session</p>
-                    </div>
-                    <span class="track-lang">English (EN)</span>
-                </div>
-                <div class="track-item" data-track="milano">
-                    <div class="track-info">
-                        <h4>Notturno Milanese</h4>
-                        <p>WhisMi Sound - Ballad</p>
-                    </div>
-                    <span class="track-lang">Italiano (IT)</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Sezione Live Dates -->
-    <section id="live" class="section">
-        <h2 class="section-title">// Flight / Live Board</h2>
-        <div class="live-board">
-            <div class="live-row">
-                <div class="live-date">24.03.2026</div>
-                <div class="live-venue">Club Cyber-Tokyo</div>
-                <div class="live-city">Milano, Italy</div>
-                <button class="live-btn ticket-btn">TICKETS</button>
-            </div>
-            <div class="live-row">
-                <div class="live-date">02.04.2026</div>
-                <div class="live-venue">Neon Blue Jazz Lounge</div>
-                <div class="live-city">Roma, Italy</div>
-                <button class="live-btn ticket-btn">TICKETS</button>
-            </div>
-            <div class="live-row">
-                <div class="live-date">18.04.2026</div>
-                <div class="live-venue">Akihabara Groove Stage</div>
-                <div class="live-city">Torino, Italy</div>
-                <button class="live-btn ticket-btn">TICKETS</button>
-            </div>
-        </div>
-    </section>
-
-    <!-- Sezione Instagram Feed / Social -->
+    <!-- Sezione Instagram Feed Sincronizzato con Elfsight -->
     <section id="social" class="section">
-        <h2 class="section-title">// Social Frequencies (IG)</h2>
+        <h2 class="section-title">// Social Frequencies</h2>
         <div class="instagram-container">
             <div class="instagram-banner">
-                <p>Segui le prove, i backstage e gli annunci live in tempo reale sul nostro canale ufficiale.</p>
-                <!-- Sostituisci il link con la vera pagina Instagram dei WhisMi Sound -->
-                <a href="https://instagram.com" target="_blank" class="ig-follow-btn">@whismisound on IG</a>
+                <p>Non perderti backstage, prove e aggiornamenti live in tempo reale.</p>
+                <a href="https://www.instagram.com/whismi_sound/" target="_blank" class="ig-massive-follow-btn">
+                    <svg class="ig-icon" viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 11.37 0 1 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                    FOLLOW @whismi_sound
+                </a>
             </div>
-            <!-- Qui in futuro potrai incollare il codice del widget Instagram (es. Common Ninja o EmbedSocial) -->
-            <div class="instagram-grid-mockup">
-                <div class="ig-post-mockup"><span>Reel: Live Jam</span></div>
-                <div class="ig-post-mockup"><span>Backstage Tokyo</span></div>
-                <div class="ig-post-mockup"><span>New Track Preview</span></div>
+            <div class="instagram-feed-wrapper">
+                <!-- Widget Elfsight Instagram Feed Integrato -->
+                <script src="https://elfsightcdn.com/platform.js" async></script>
+                <div class="elfsight-app-dba474fa-4ae7-4780-beb6-5e6db35ac57b" data-elfsight-app-lazy></div>
             </div>
         </div>
     </section>
 
-    <!-- Sezione Booking / Contatti -->
+    <!-- Sezione Booking & Collab diretta su Instagram DM -->
     <section id="booking" class="section">
         <h2 class="section-title">// Secure Transmission</h2>
         <div class="booking-container">
+            <div class="booking-intro" style="text-align: center; margin-bottom: 25px;">
+                <p style="color: #bfaee3;">Per festival, live o collaborazioni, inviaci un messaggio diretto su Instagram:</p>
+            </div>
             <form class="booking-form" id="bookingForm">
                 <div class="form-group">
-                    <label for="name">Nome / Venue / Festival</label>
-                    <input type="text" id="name" required placeholder="Es. Blue Note Milano">
+                    <label for="bookerName">Nome / Venue / Festival</label>
+                    <input type="text" id="bookerName" required placeholder="Es. Blue Note Milano">
                 </div>
                 <div class="form-group">
-                    <label for="email">Canale di Contatto (Email)</label>
-                    <input type="email" id="email" required placeholder="name@domain.com">
+                    <label for="contactInfo">Il tuo Contatto (IG o Email)</label>
+                    <input type="text" id="contactInfo" required placeholder="@tuoprofilo o name@domain.com">
                 </div>
                 <div class="form-group">
-                    <label for="message">Dettagli Evento / Messaggio</label>
-                    <textarea id="message" rows="4" required placeholder="Raccontaci del live o della collaborazione..."></textarea>
+                    <label for="bookerMessage">Dettagli Evento / Collaborazione</label>
+                    <textarea id="bookerMessage" rows="4" required placeholder="Raccontaci del live o della collab..."></textarea>
                 </div>
-                <button type="submit" class="submit-btn">Invia Trasmissione</button>
+                <button type="submit" class="submit-btn">APRI CHAT DM SU INSTAGRAM</button>
             </form>
         </div>
     </section>

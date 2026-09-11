@@ -1,36 +1,22 @@
-// Gestione interazione Player Audio
-const trackItems = document.querySelectorAll('.track-item');
-
-trackItems.forEach(item => {
-    item.addEventListener('click', () => {
-        // Rimuove la classe active da tutti i brani
-        trackItems.forEach(t => t.classList.remove('active'));
-        
-        // Aggiunge la classe active al brano cliccato
-        item.classList.add('active');
-        
-        // Estrae il nome o il tipo di traccia
-        const trackName = item.querySelector('h4').innerText;
-        alert(`Collegamento stabilito: Riproduzione in corso di "${trackName}"`);
-    });
-});
-
-// Gestione tasti Ticket dei Live
-const ticketButtons = document.querySelectorAll('.ticket-btn');
-
-ticketButtons.forEach(btn => {
-    btn.addEventListener('click', () => {
-        alert('Richiesta d’accesso al Neo-Tokyo stage registrata!');
-    });
-});
-
-// Gestione invio form di Booking
+// Gestione form Booking & Collab -> Reindirizzamento ai DM di Instagram
 const bookingForm = document.getElementById('bookingForm');
 
 if (bookingForm) {
     bookingForm.addEventListener('submit', (e) => {
         e.preventDefault();
-        alert('Trasmissione cifrata inviata con successo ai WhisMi Sound! Ti ricontatteranno presto.');
+        
+        // Recupera i valori inseriti dall'utente
+        const name = document.getElementById('bookerName').value;
+        const contact = document.getElementById('contactInfo').value;
+        const message = document.getElementById('bookerMessage').value;
+        
+        // Mostra un avviso chiaro prima di aprire la pagina Instagram
+        alert(`Grazie ${name}! La tua richiesta è pronta. Verrai reindirizzato al profilo Instagram di WhisMi Sound per inviarla via DM.`);
+        
+        // Apre la pagina Instagram ufficiale della band in una nuova scheda
+        window.open('https://www.instagram.com/whismi_sound/', '_blank');
+        
+        // Pulisce il form
         bookingForm.reset();
     });
 }
