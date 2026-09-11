@@ -55,3 +55,25 @@ if (document.readyState === 'loading') {
 } else {
     initSakuraRain();
 }
+
+// Gestione Musica di Sottofondo & Soundwave Button
+const bgMusic = document.getElementById('bgMusic');
+const musicToggle = document.getElementById('musicToggle');
+
+if (bgMusic && musicToggle) {
+    // Imposta un volume basso fisso (es. 25%)
+    bgMusic.volume = 0.25;
+
+    musicToggle.addEventListener('click', () => {
+        if (bgMusic.paused) {
+            bgMusic.play().then(() => {
+                musicToggle.classList.add('playing');
+            }).catch(e => {
+                console.log("Riproduzione audio bloccata dal browser:", e);
+            });
+        } else {
+            bgMusic.pause();
+            musicToggle.classList.remove('playing');
+        }
+    });
+}
