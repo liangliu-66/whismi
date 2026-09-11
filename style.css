@@ -588,3 +588,63 @@ footer {
         font-size: 0.85rem;
     }
 }
+
+/* Pulsante Soundwave Neon in basso a sinistra */
+.soundwave-btn {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 9999;
+    background: rgba(11, 6, 20, 0.85);
+    border: 2px solid var(--neon-cyan);
+    border-radius: 30px;
+    padding: 8px 16px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 0 12px rgba(0, 243, 255, 0.4);
+    transition: 0.3s ease;
+}
+
+.soundwave-btn:hover {
+    border-color: var(--neon-pink);
+    box-shadow: 0 0 20px var(--neon-pink);
+    transform: scale(1.05);
+}
+
+.wave-bar {
+    display: block;
+    width: 3px;
+    height: 14px;
+    background-color: var(--neon-cyan);
+    border-radius: 2px;
+    box-shadow: 0 0 6px var(--neon-cyan);
+}
+
+.wave-label {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: #fff;
+    margin-left: 4px;
+    letter-spacing: 1px;
+}
+
+/* Animazione attiva della Soundwave quando la musica è in riproduzione */
+.soundwave-btn.playing .wave-bar {
+    background-color: var(--neon-pink);
+    box-shadow: 0 0 8px var(--neon-pink);
+    animation: soundWaveAnim 0.6s ease-in-out infinite alternate;
+}
+
+.soundwave-btn.playing .wave-bar:nth-child(1) { animation-delay: 0.1s; }
+.soundwave-btn.playing .wave-bar:nth-child(2) { animation-delay: 0.3s; }
+.soundwave-btn.playing .wave-bar:nth-child(3) { animation-delay: 0.2s; }
+.soundwave-btn.playing .wave-bar:nth-child(4) { animation-delay: 0.4s; }
+
+@keyframes soundWaveAnim {
+    0% { height: 6px; }
+    100% { height: 22px; }
+}
