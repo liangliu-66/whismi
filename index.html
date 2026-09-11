@@ -1,4 +1,3 @@
-Ecco il codice completo e aggiornato del file index.html, integrato con il tag audio per il brano staywithme.mp3 posizionato dentro la cartella gallery e il pulsante interattivo a forma di soundwave neon in basso a sinistra:
 <!DOCTYPE html>
 <html lang="it">
 <head>
@@ -15,17 +14,15 @@ Ecco il codice completo e aggiornato del file index.html, integrato con il tag a
     <!-- Contenitore obbligatorio per l'effetto petali di Sakura -->
     <div class="sakura-container" id="sakuraContainer"></div>
 
-    <!-- Audio di sottofondo e Pulsante Soundwave Neon -->
-    <audio id="bgMusic" loop>
+    <!-- Audio di sottofondo e Pulsante Soundwave Neon Minimale -->
+    <audio id="bgMusic" preload="auto" loop>
         <source src="gallery/staywithme.mp3" type="audio/mp3">
     </audio>
     
     <button class="soundwave-btn" id="musicToggle" aria-label="Play/Stop Musica">
-        <span class="wave-bar"></span>
-        <span class="wave-bar"></span>
-        <span class="wave-bar"></span>
-        <span class="wave-bar"></span>
-        <span class="wave-label">SOUND</span>
+        <svg class="soundwave-svg" width="60" height="30" viewBox="0 0 100 40">
+            <path d="M 5 20 Q 15 5, 25 20 T 45 20 T 65 5 T 85 20 T 95 20" />
+        </svg>
     </button>
 
     <header>
@@ -188,4 +185,3 @@ Ecco il codice completo e aggiornato del file index.html, integrato con il tag a
     <script src="script.js"></script>
 </body>
 </html>
-
