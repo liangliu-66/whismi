@@ -75,7 +75,7 @@ const bgMusic = document.getElementById('bgMusic');
 const musicToggle = document.getElementById('musicToggle');
 
 if (bgMusic && musicToggle) {
-    bgMusic.volume = 0.25; // Volume basso preimpostato
+    bgMusic.volume = 0.20; // Volume basso preimpostato
 
     musicToggle.addEventListener('click', () => {
         if (bgMusic.paused) {
