@@ -19,6 +19,7 @@ body {
     font-family: 'Rajdhani', sans-serif;
     overflow-x: hidden;
     scroll-behavior: smooth;
+    position: relative;
 }
 
 /* Sfondo con griglia cyberpunk / city pop */
@@ -45,7 +46,7 @@ header {
     position: fixed;
     width: 100%;
     top: 0;
-    z-index: 100;
+    z-index: 1000;
     height: 75px;
 }
 
@@ -56,7 +57,7 @@ header {
     filter: drop-shadow(0 0 8px rgba(0, 243, 255, 0.5));
 }
 
-nav a {
+.desktop-nav a {
     color: var(--text-color);
     text-decoration: none;
     margin-left: 20px;
@@ -64,9 +65,97 @@ nav a {
     transition: 0.3s;
 }
 
-nav a:hover {
+.desktop-nav a:hover {
     color: var(--neon-pink);
     text-shadow: 0 0 8px var(--neon-pink);
+}
+
+/* Menu Hamburger (nascosto su desktop) */
+.menu-toggle {
+    display: none;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 22px;
+    z-index: 1001;
+}
+
+.menu-toggle .bar {
+    width: 100%;
+    height: 3px;
+    background-color: var(--neon-cyan);
+    border-radius: 2px;
+    box-shadow: 0 0 8px var(--neon-cyan);
+    transition: 0.3s ease;
+}
+
+/* Menu Mobile Overlay a tendina (stile cyberpunk) */
+.mobile-menu-overlay {
+    position: fixed;
+    top: 75px;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 75px);
+    background: rgba(11, 6, 20, 0.95);
+    backdrop-filter: blur(15px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-100%);
+    opacity: 0;
+    transition: transform 0.4s cubic-bezier(0.77, 0, 0.175, 1), opacity 0.4s ease;
+    z-index: 999;
+}
+
+.mobile-menu-overlay.active {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.mobile-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.mobile-nav-link {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.3s;
+    text-shadow: 0 0 10px rgba(0, 243, 255, 0.3);
+}
+
+.mobile-nav-link:hover {
+    color: var(--neon-pink);
+    text-shadow: 0 0 15px var(--neon-pink), 0 0 30px var(--neon-purple);
+    transform: scale(1.05);
+}
+
+/* Animazione icona hamburger quando attiva (X) */
+.menu-toggle.active .bar:nth-child(1) {
+    transform: translateY(9.5px) rotate(45deg);
+    background-color: var(--neon-pink);
+    box-shadow: 0 0 10px var(--neon-pink);
+}
+
+.menu-toggle.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active .bar:nth-child(3) {
+    transform: translateY(-9.5px) rotate(-45deg);
+    background-color: var(--neon-pink);
+    box-shadow: 0 0 10px var(--neon-pink);
 }
 
 /* Hero Section */
@@ -116,7 +205,7 @@ nav a:hover {
     max-width: 900px;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Assicura la perfetta centratura di tutti gli elementi */
+    align-items: center;
 }
 
 .hero-title {
@@ -134,7 +223,6 @@ nav a:hover {
     line-height: 1.1;
 }
 
-/* Sottotitolo corretto: grande, centrato e con font Orbitron abbinato allo stile del sito */
 .hero-subtitle {
     font-family: 'Orbitron', sans-serif;
     font-size: clamp(1rem, 2vw, 1.3rem);
@@ -178,6 +266,8 @@ nav a:hover {
     padding: 100px 5%;
     max-width: 1200px;
     margin: 0 auto;
+    position: relative;
+    z-index: 5;
 }
 
 .section-title {
@@ -189,7 +279,7 @@ nav a:hover {
     text-shadow: 0 0 10px rgba(255, 42, 133, 0.5);
 }
 
-/* Band Grid & Foto Reali dei Membri */
+/* Band Grid & Foto Reali */
 .band-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -222,7 +312,6 @@ nav a:hover {
     box-shadow: 0 0 25px rgba(0, 243, 255, 0.4);
 }
 
-/* Stile per le immagini reali della crew nella cartella gallery */
 .member-avatar-container {
     width: 120px;
     height: 120px;
@@ -272,7 +361,7 @@ nav a:hover {
     text-shadow: 0 0 8px var(--neon-pink);
 }
 
-/* Sezione Instagram con Tasto FOLLOW MOLTO VISIBILE */
+/* Instagram */
 .instagram-container {
     background: var(--card-bg);
     border: 2px solid var(--neon-pink);
@@ -384,6 +473,45 @@ nav a:hover {
     box-shadow: 0 0 25px var(--neon-pink);
 }
 
+/* Effetto Petali Sakura (Ciliegio) Dolce e Rallentato */
+.sakura-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 99999;
+    overflow: hidden;
+}
+
+.petal {
+    position: absolute;
+    background: linear-gradient(135deg, #ffb7c5 0%, #ff2a85 100%);
+    border-radius: 150% 0 150% 0;
+    opacity: 0.75;
+    box-shadow: 0 0 8px rgba(255, 42, 133, 0.5);
+    animation: sakuraFall linear infinite, sakuraSway ease-in-out infinite;
+}
+
+@keyframes sakuraFall {
+    0% {
+        transform: translateY(-10vh) rotate(0deg);
+    }
+    100% {
+        transform: translateY(110vh) rotate(360deg);
+    }
+}
+
+@keyframes sakuraSway {
+    0%, 100% {
+        transform: translateX(0) rotate(0deg);
+    }
+    50% {
+        transform: translateX(80px) rotate(45deg);
+    }
+}
+
 /* Footer */
 footer {
     text-align: center;
@@ -391,8 +519,11 @@ footer {
     border-top: 1px solid rgba(157, 0, 255, 0.2);
     color: #7a6a9e;
     font-size: 0.9rem;
+    position: relative;
+    z-index: 5;
 }
 
 @media (max-width: 768px) {
-    nav { display: none; }
+    .desktop-nav { display: none; }
+    .menu-toggle { display: flex; }
 }

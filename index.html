@@ -11,16 +11,37 @@
 </head>
 <body>
 
+    <!-- Contenitore obbligatorio per l'effetto petali di Sakura -->
+    <div class="sakura-container" id="sakuraContainer"></div>
+
     <header>
         <div class="logo-container">
             <img src="gallery/logo.png" alt="WhisMi Sound Logo" class="nav-logo">
         </div>
-        <nav>
+        
+        <!-- Menu Desktop -->
+        <nav class="desktop-nav">
             <a href="#band">Crew</a>
             <a href="#social">Instagram</a>
             <a href="#booking">Booking</a>
         </nav>
+
+        <!-- Hamburger Icon per Smartphone -->
+        <button class="menu-toggle" id="menuToggle" aria-label="Apri Menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
     </header>
+
+    <!-- Menu a tendina mobile a schermo intero con effetto cyberpunk -->
+    <div class="mobile-menu-overlay" id="mobileMenu">
+        <nav class="mobile-nav">
+            <a href="#band" class="mobile-nav-link">// Crew</a>
+            <a href="#social" class="mobile-nav-link">// Instagram</a>
+            <a href="#booking" class="mobile-nav-link">// Booking</a>
+        </nav>
+    </div>
 
     <!-- Hero Section -->
     <section class="hero">
@@ -35,7 +56,7 @@
         </div>
     </section>
 
-    <!-- Sezione Crew con foto profilo reali -->
+    <!-- Sezione Crew con foto profilo reali e link Instagram -->
     <section id="band" class="section">
         <h2 class="section-title">// CREW</h2>
         <div class="band-grid">
