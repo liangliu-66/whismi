@@ -473,7 +473,7 @@ header {
     box-shadow: 0 0 25px var(--neon-pink);
 }
 
-/* Effetto Petali Sakura (Ciliegio) Dolce e Rallentato */
+/* Effetto Petali Sakura (Ciliegio) Dolce, Rallentato e Full Screen (Pochi petali) */
 .sakura-container {
     position: fixed;
     top: 0;
@@ -489,8 +489,8 @@ header {
     position: absolute;
     background: linear-gradient(135deg, #ffb7c5 0%, #ff2a85 100%);
     border-radius: 150% 0 150% 0;
-    opacity: 0.75;
-    box-shadow: 0 0 8px rgba(255, 42, 133, 0.5);
+    opacity: 0.65;
+    box-shadow: 0 0 6px rgba(255, 42, 133, 0.4);
     animation: sakuraFall linear infinite, sakuraSway ease-in-out infinite;
 }
 
@@ -508,7 +508,7 @@ header {
         transform: translateX(0) rotate(0deg);
     }
     50% {
-        transform: translateX(80px) rotate(45deg);
+        transform: translateX(50px) rotate(30deg);
     }
 }
 
@@ -523,7 +523,60 @@ footer {
     z-index: 5;
 }
 
+/* Ottimizzazione Smartphone Definitiva (Foto intera, fading leggero in basso e zero spazi vuoti) */
 @media (max-width: 768px) {
     .desktop-nav { display: none; }
     .menu-toggle { display: flex; }
+
+    .hero {
+        min-height: auto;
+        padding-top: 75px;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .hero-image-container {
+        position: relative;
+        top: 0;
+        width: 100%;
+        height: auto;
+    }
+
+    .hero-img {
+        width: 100%;
+        height: auto;
+        max-height: 42vh; /* Altezza bilanciata per mostrare tutta la foto della band */
+        object-fit: contain; /* Mostra tutta l'immagine per intero senza tagli */
+        object-position: center center;
+        background-color: var(--bg-color);
+        display: block;
+    }
+
+    /* Fading morbido e limitato solo agli ultimi pixel in basso */
+    .hero-overlay {
+        background: linear-gradient(to bottom, transparent 75%, rgba(11, 6, 20, 0.9) 100%);
+    }
+
+    .hero-content {
+        position: relative;
+        padding: 5px 15px 30px 15px;
+        margin-top: -15px; /* Riporta i testi esattamente sotto la foto senza spazi vuoti */
+        background: transparent;
+    }
+
+    .hero-title {
+        font-size: 1.7rem;
+        margin-bottom: 5px;
+    }
+
+    .hero-subtitle {
+        font-size: 0.78rem;
+        margin-bottom: 12px;
+        letter-spacing: 1px;
+    }
+
+    .hero-follow-btn {
+        padding: 10px 24px;
+        font-size: 0.85rem;
+    }
 }
